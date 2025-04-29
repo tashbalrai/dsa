@@ -132,3 +132,25 @@ console.log('Iterative naive: ',factorialIterative(5));
 console.log('Recursive accumulator: ', factorialAccumulator(5));
 console.log('Recursive memoization: ', factorialMemo(5), memo);
 console.log('Iterative double speed: ', factorial2xIterative(5));
+
+// Test Cases
+function testFactorial() {
+  const testCases = [
+    { input: 0, expected: 1 },
+    { input: 1, expected: 1 },
+    { input: 5, expected: 120 },
+    { input: 10, expected: 3628800 },
+  ];
+
+  testCases.forEach(({ input, expected }) => {
+    console.assert(factorialRecursive(input) === expected, `factorialRecursive(${input}) === ${expected}`);
+    console.assert(factorialIterative(input) === expected, `factorialIterative(${input}) === ${expected}`);
+    console.assert(factorialAccumulator(input) === expected, `factorialAccumulator(${input}) === ${expected}`);
+    console.assert(factorialMemo(input) === expected, `factorialMemo(${input}) === ${expected}`);
+    console.assert(factorial2xIterative(input) === expected, `factorial2xIterative(${input}) === ${expected}`);
+  });
+
+  console.log('All test cases passed!');
+}
+
+testFactorial();
