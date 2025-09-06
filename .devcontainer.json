@@ -1,0 +1,15 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/typescript-node",
+    "name": "js-dsa",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "streetsidesoftware.code-spell-checker",
+                "unifiedjs.vscode-mdx",
+                "esbenp.prettier-vscode",
+                "astro-build.astro-vscode"
+            ]
+        }
+    },
+    "postCreateCommand": "npm install --save-dev jest"
+}
