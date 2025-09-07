@@ -1,5 +1,19 @@
 {
-  "devDependencies": {
-    "jest": "^30.1.3"
-  }
+    "name": "DSA",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+    },
+    "devDependencies": {
+        "jest": "^30.1.3"
+    },
+    "jest": {
+        "testMatch": [
+            "**/*.js",
+            "*.js"
+        ],
+        "testEnvironment": "jest-environment-node",
+        "transform": {}
+    }
 }
